@@ -1,0 +1,78 @@
+Objetivo
+O objetivo do jogo é obter o maior número de pontos possível pelas apostas realizadas. Os 
+pontos obtidos são a soma dos pontos obtidos por cada uma das nossas apostas. 
+1º lugar – 5 pontos
+2º lugar – 3 pontos
+3º lugar – 2 pontos
+Restantes – 0 pontos
+Preparação do jogo
+Para esta implementação apenas jogam 2 jogadores: um humano e um bot.
+• Coloca-se o tabuleiro na mesa e as marcas dos corredores na casa da partida.
+• Baralham-se e distribuem-se (secretamente) as cartas de aposta entre os jogadores, 
+duas cartas por jogador (por ser um jogo a 2 jogadores); cada jogador guarda a sua 
+carta de aposta. Esta é a aposta inicial. As cartas de aposta não distribuídas não 
+entram para esta corrida.
+• Baralham-se as cartas de corrida e distribuem-se aos jogadores. Dão-se 7 cartas de 
+corrida a cada jogador, destas o jogador escolhe uma para a sua 2ª aposta (pode ser 
+4
+um animal que já lhe tenha sido sorteado na aposta inicial) e junta essa carta à sua 
+aposta inicial.
+• Colocam-se as restantes cartas de corrida num monte acessível a todos os jogadores.
+Definições:
+• Deck: Monte de cartas
+• Turno de um jogador: no seu turno um jogador joga de 1 a 4 cartas da mão para a 
+mesa, repõe a mão para 6 cartas e passa a vez.
+• Ronda: é composta por duas fases; a fase de influência e a fase de corrida.
+• Fase de influência: conjunto dos turnos de diferentes jogadores até ser despoletado 
+o final da fase de influência.
+• Fase de corrida: fase do jogo em que os corredores (animais) se podem movimentar 
+de acordo com as cartas jogadas.
+• Fim do jogo: o jogo termina quando 3 ou mais dos corredores terminarem a corrida.
+Desenrolar do Jogo
+O primeiro jogador é escolhido aleatoriamente. Cada jogador joga à vez não sendo permitido 
+passar.
+O jogo desenrola-se por rondas iniciando no 1º jogador da ronda e seguindo segundo o 
+sentido de rotação dos ponteiros de um relógio. Cada ronda tem duas fases: a fase de 
+influência e a fase de corrida.
+Na fase de influência, no seu turno, cada jogador deve jogar no mínimo 1 carta da sua mão,
+podendo jogar até 4 cartas da mão, desde que:
+a) o número de cartas na mesa não exceda 8
+b) o número de cartas de cada animal na mesa não exceda 4
+c) todas as cartas que o jogador joga neste turno são do mesmo (corredor) animal
+O turno do jogador termina e o jogador repõe o número de cartas na mão (6 cartas).
+Caso o deck de corrida termine baralham-se as cartas descartadas formando-se com estas 
+um novo deck de corrida.
+A fase de influência termina (independentemente do número de jogadores que nela tenham 
+participado) quando uma das duas condições de limite de cartas na mesa descritas no ponto 
+anterior (a), b) ou ambas) tenha ocorrido.
+A seguir passa-se à fase de corrida onde cada animal se desloca na pista de acordo com: 
+• a ordem de movimento dos animais, 
+• as características especificas de cada um e
+• as cartas do seu tipo que foram jogadas para a mesa na fase de influência.
+5
+__________________________________________________________________________
+Regras de movimento dos animais
+• Se existir na mesa uma (ou mais) cartas com o lobo a uivar, nenhum animal se move 
+com exceção do lobo.
+• Salvo a exceção anterior os animais movem-se pela ordem a seguir indicada:
+1. a lebre: se existirem cartas de lebre na mesa, a lebre avança dois espaços exceto 
+se estiver em 1º lugar (pode ser empatada) e existirem 4 cartas de lebre na mesa. 
+A exceção não se aplica na casa da partida.
+2. a tartaruga: avança sempre uma casa. Se houver 4 cartas de tartaruga na mesa 
+avança 2 espaços.
+3. o lobo: se existir uma carta de lobo na mesa avança um espaço. Se houver mais 
+cartas de lobo na mesa avança o número de cartas N-1.
+4. a raposa: avança tantos espaços quantas cartas de raposa existirem na mesa.
+5. o cordeiro: se existirem cartas de cordeiro na mesa, avança o número de cartas 
+N+1. No entanto, se tiver de atravessar um espaço com ribeiro, para nesse espaço 
+ignorando o resto do movimento nesta ronda.
+__________________________________________________________________________
+Finalmente verificam-se as condições de fim de jogo: 3 ou mais dos corredores já terem 
+terminado a corrida. Caso o jogo não tenha ainda terminado, passa-se a marca do 1º jogador 
+para o jogador à esquerda do atual e o jogo passa à ronda seguinte.
+Fim do Jogo
+O jogo termina quando 3 ou mais dos corredores atravessam a linha de chegada! Cada 
+jogador soma os pontos das suas apostas de acordo com a classificação de cada animal que 
+passou a linha de chegada.
+Ganha quem tiver mais pontos. Em caso de empate ganha quem tiver mais pontos nas 
+apostas iniciais. Se ainda estiverem empatados partilham a vitór

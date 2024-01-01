@@ -1,0 +1,2 @@
+(81,81)(W,C,L,L,L,T,C,W,C,T,W,W,R,R,T,W,W,L,T,R,T,C,C,R,w,L,R,L,L,W,R,w,T,L,T,C,C,R,W,W,T,W,R,T,L,T,C,L,R,C,w,T,L,L,C,T,W,T,T,R,R,L,C,R,W,L,R,C,R,C,C,T,T,L,T,C,L,L,W,R,L)
+(5,5)(x,C,x,x,x)
